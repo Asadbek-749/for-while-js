@@ -25,3 +25,5 @@ while (son1 >= son2) {
   qoldiq = son1 - son2;
 }
 console.log(qoldiq);
+
+

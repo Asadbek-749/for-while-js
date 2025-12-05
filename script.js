@@ -220,70 +220,36 @@ console.log("Og'rilik:", natija2, "kg");
 // 8-masala
 let D = 25;
 let M = 12;
-let kunlar = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-let oyNomi = [
-  "yanvar",
-  "fevral",
-  "mart",
-  "aprel",
-  "may",
-  "iyun",
-  "iyul",
-  "avgust",
-  "sentyabr",
-  "oktyabr",
-  "noyabr",
-  "dekabr",
-];
-if (M >= 1 && M <= 12) {
-  if (D <= kunlar[M - 1]) {
-    switch (M) {
-      case 1:
-        console.log(D + "-" + oyNomi[0]);
-        break;
-      case 2:
-        console.log(D + "-" + oyNomi[1]);
-        break;
-      case 3:
-        console.log(D + "-" + oyNomi[2]);
-        break;
-      case 4:
-        console.log(D + "-" + oyNomi[3]);
-        break;
-      case 5:
-        console.log(D + "-" + oyNomi[4]);
-        break;
-      case 6:
-        console.log(D + "-" + oyNomi[5]);
-        break;
-      case 7:
-        console.log(D + "-" + oyNomi[6]);
-        break;
-      case 8:
-        console.log(D + "-" + oyNomi[7]);
-        break;
-      case 9:
-        console.log(D + "-" + oyNomi[8]);
-        break;
-      case 10:
-        console.log(D + "-" + oyNomi[9]);
-        break;
-      case 11:
-        console.log(D + "-" + oyNomi[10]);
-        break;
-      case 12:
-        console.log(D + "-" + oyNomi[11]);
-        break;
+let oyKun = 0;
 
-      default:
-        break;
-    }
-  } else {
-    console.log("Noto'g'ri oy kiritdingiz !");
-  }
-} else {
-  console.log("Notug'ri oy kitirdingiz!");
+switch (M) {
+  case 12:
+    oyKun += 31;
+  case 11:
+    oyKun += 30;
+  case 10:
+    oyKun += 31;
+  case 9:
+    oyKun += 30;
+  case 8:
+    oyKun += 31;
+  case 7:
+    oyKun += 31;
+  case 6:
+    oyKun += 30;
+  case 5:
+    oyKun += 31;
+  case 4:
+    oyKun += 30;
+  case 3:
+    oyKun += 31;
+  case 2:
+    oyKun += 31;
+  case 1:
+    oyKun += 31;
 }
+
+console.log("Yil boshidan", +oyKun + D);
 
 // 9-masala
 
@@ -305,43 +271,43 @@ let oyNomi1 = [
   "dekabr",
 ];
 if (M1 >= 1 && M1 <= 12) {
-  if (D1 <= kunlar[M - 1]) {
+  if (D1 <= kunlar1[M - 1]) {
     switch (M1) {
       case 1:
-        console.log((D1+1) + "-" + oyNomi[0]);
+        console.log(D1 + 1 + "-" + oyNomi1[0]);
         break;
       case 2:
-        console.log((D1+1) + "-" + oyNomi[1]);
+        console.log(D1 + 1 + "-" + oyNomi1[1]);
         break;
       case 3:
-        console.log((D1+1) + "-" + oyNomi[2]);
+        console.log(D1 + 1 + "-" + oyNomi1[2]);
         break;
       case 4:
-        console.log((D1+1) + "-" + oyNomi[3]);
+        console.log(D1 + 1 + "-" + oyNomi1[3]);
         break;
       case 5:
-        console.log((D1+1) + "-" + oyNomi[4]);
+        console.log(D1 + 1 + "-" + oyNomi1[4]);
         break;
       case 6:
-        console.log((D1+1) + "-" + oyNomi[5]);
+        console.log(D1 + 1 + "-" + oyNomi1[5]);
         break;
       case 7:
-        console.log((D1+1) + "-" + oyNomi[6]);
+        console.log(D1 + 1 + "-" + oyNomi1[6]);
         break;
       case 8:
-        console.log((D1+1) + "-" + oyNomi[7]);
+        console.log(D1 + 1 + "-" + oyNomi1[7]);
         break;
       case 9:
-        console.log((D1+1) + "-" + oyNomi[8]);
+        console.log(D1 + 1 + "-" + oyNomi1[8]);
         break;
       case 10:
-        console.log((D1+1) + "-" + oyNomi[9]);
+        console.log(D1 + 1 + "-" + oyNomi1[9]);
         break;
       case 11:
-        console.log((D1+1) + "-" + oyNomi[10]);
+        console.log(D1 + 1 + "-" + oyNomi1[10]);
         break;
       case 12:
-        console.log((D1+1) + "-" + oyNomi[11]);
+        console.log(D1 + 1 + "-" + oyNomi1[11]);
         break;
 
       default:
@@ -352,4 +318,62 @@ if (M1 >= 1 && M1 <= 12) {
   }
 } else {
   console.log("Notug'ri oy kitirdingiz!");
+}
+
+// 10-masala
+let Y = "j"; // j-janub s-shimol q-sharq g-garb
+let K = 2; // 0-harakatlanish, 1-chapga burul, 2-o'ngga burul
+
+switch (Y && K) {
+  case "j" && 0:
+    console.log("Janubga Harakatlanmoqda");
+    break;
+
+  case "j" && 1:
+    console.log("Janubga Chapga");
+    break;
+
+  case "j" && 2:
+    console.log("Janubga O'nga");
+    break;
+
+  case "s" && 0:
+    console.log("Shimolga Harakatlanmoqda");
+    break;
+
+  case "s" && 1:
+    console.log("Shimolga Chapga");
+    break;
+
+  case "s" && 2:
+    console.log("Shimolga O'nga");
+    break;
+
+  case "q" && 0:
+    console.log("Sharqqa Harakatlanmoqda");
+    break;
+
+  case "q" && 1:
+    console.log("Sharqqa Chapga");
+    break;
+
+  case "q" && 2:
+    console.log("Sharqqa O'nga");
+    break;
+
+  case "g" && 0:
+    console.log("G'arbga Harakatlanmoqda");
+    break;
+
+  case "g" && 1:
+    console.log("G'arbga Chapga");
+    break;
+
+  case "g" && 2:
+    console.log("G'arbga O'nga");
+    break;
+
+  default:
+    console.log("Harakatlanmadi !!!");
+    break;
 }
