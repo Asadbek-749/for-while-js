@@ -18,12 +18,12 @@ while (A1 >= B1) {
 console.log("Joylashishlar soni:", Soni);
 
 // 3-masala
-let son1 = 35;
-let son2 = 20;
-let qoldiq;
-while (son1 >= son2) {
-  qoldiq = son1 - son2;
+let N = 23;
+let M = 4;
+let butunSon = 0;
+while (N >= M) {
+  N = N - M;
+  butunSon++;
 }
-console.log(qoldiq);
-
-
+console.log("Butun Son:", butunSon);
+console.log("Qoldiq Son:", N);
